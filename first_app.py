@@ -7,6 +7,11 @@ import pandas as pd
 import streamlit as st
 st.title('Meet your NBA Assistant Manager:') 
 st.header('Recommender System and next best transaction')
+st.text("")
+st.text("")
+st.write('Yukang Xu')
+
+
 
 st.text("")
 st.text("")
@@ -50,8 +55,8 @@ st.text("")
 st.header('3. How to use?')
 st.write('We use recommender system to help manager find suitable players in the market when players got injured or transaction is unavoidable')
 st.subheader('a. Find suitable one to replace injured players')
-st.write('Once you type in a team’s name such as LA Lakers, it assists our manger to analyze current trading market and list the best fits to the team. They could be the perfect substitute players without losing chemistry of the team. ')
-st.selectbox('Team name', ['La Lakers'] + ['Houston Rocket'])
+st.write('if plugging in a name, this system could narrow down our trading targets similar as key players who will be leaving and we could expect they play the almost the same role in the team. ')
+st.selectbox('player name', ['Yao Ming'] + ['Kobe Bryant'])
 
 df = pd.DataFrame(np.random.randn(5, 8),columns=('James Harden','Stephen Curry','Michael Jordan','Klay Tompson','Russ Westbrook','Chris Paul','Danny Green','Paul George'),index=('Score','Assistant','Rebound','Height','Weight'))
 st.dataframe(df)  # Same as st.write(df)
@@ -59,9 +64,8 @@ st.dataframe(df)  # Same as st.write(df)
 st.text("")
 
 st.subheader('b. List transfer targets ')
-st.write('if plugging in a name, this system could narrow down our trading targets similar as key players who will be leaving and we could expect they play the almost the same role in the team. ')
-st.selectbox('player name', ['Yao Ming'] + ['Kobe Bryant'])
-
+st.write('Once you type in a team’s name such as LA Lakers, it assists our manger to analyze current trading market and list the best fits to the team. They could be the perfect substitute players without losing chemistry of the team. ')
+st.selectbox('Team name', ['La Lakers'] + ['Houston Rocket'])
 df = pd.DataFrame(np.random.randn(5, 8),columns=('James Harden','Stephen Curry','Michael Jordan','Klay Tompson','Russ Westbrook','Chris Paul','Danny Green','Paul George'),index=('Score','Assistant','Rebound','Height','Weight'))
 st.dataframe(df)  # Same as st.write(df)
 
